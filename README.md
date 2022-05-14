@@ -3,7 +3,7 @@ Este programa é parte de um pequeno projeto de introdução à biblioteca [LIBS
 
 ### Objetivo:
 
-Plotar o hyperplano de separação de um conjunto de dados o qual contém informação sobre 2 classes, representadas por apenas 2 características. 
+Plotar o hyperplano de separação de um conjunto de [dados](https://github.com/sj-silva/LIBSVM_C/blob/main/linear_case/dados.dat) o qual contém informação sobre 2 classes, representadas por apenas 2 características. 
 
 
 
