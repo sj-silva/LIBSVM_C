@@ -18,8 +18,8 @@ public:
     Mat(size_t m, size_t n, double* ptr);
 
     // -- Métodos Triviais --
-    inline size_t rows() { return _rows; }
-    inline size_t cols() { return _cols; }
+    inline size_t rows() const{ return _rows; }
+    inline size_t cols() const{ return _cols; }
     inline double* data() { return _dados; }
     Mat transp();// transposta 
     void show();// imprime matriz 

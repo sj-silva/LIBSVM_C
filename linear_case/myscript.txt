@@ -1,0 +1,16 @@
+reset session
+
+map_color(x) = (x==1?0xFF0000:x==-1?0x0000FF:0x000000)
+
+set terminal pngcairo  background "#000000" enhanced font "arial,8" fontscale 1.0 size 640, 480 
+
+set out 'result.png'
+set title "LibSVM - C++  Example"
+
+stats 'dados.dat' using 1:2 noout 
+set xrange[STATS_min_x:STATS_max_x]
+set yrange[STATS_min_y:STATS_max_y]
+
+plot 'dados.dat' using 1:2:(map_color(stringcolumn(3))) notitle with points pt 7 lc rgbcolor variable, \
+'hyperplane.dat' using 1:2 with line lw 3 linetype rgb "yellow" notitle, \
+'svs.dat' u 1:2 w circles lc rgb "green" notitle

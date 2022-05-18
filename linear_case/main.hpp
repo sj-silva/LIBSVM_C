@@ -40,3 +40,36 @@ Mat importData(std::string myfile) {
 
 	return result;
 }
+
+double hyperplane(double x, const Mat& W, const double& b) {
+	return ((-1.0 / W(1)) * (b + W(0) * x));
+}
+
+void createGnuplotFiles(Mat& train, Mat& svs, const Mat& W, const double& b) {
+	std::ofstream arq;
+
+	arq.open("hyperplane.dat");
+	double xmin = train.getMinCol(0);
+	double xmax = train.getMaxCol(0);
+	arq << xmin << " " << hyperplane(xmin,W,b) << "\n";
+	arq << xmax << " " << hyperplane(xmax,W,b) << "\n";
+	arq.close();
+
+	arq.open("svs.dat");
+	for (size_t i = 0; i < svs.rows(); i++) {
+		for (size_t j = 0; j<svs.cols(); j++)
+			arq << svs(i, j) << " ";
+		arq << "\n";
+	}
+	arq.close();
+
+}
+
+void plotGnuplotFiles() {
+
+	FILE* pipe = _popen("gnuplot", "w");
+
+	fprintf(pipe, "load 'myscript.txt'\n");
+
+	_pclose(pipe);
+}
