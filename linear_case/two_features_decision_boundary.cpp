@@ -117,7 +117,7 @@ int main() {
 
 	cv::imshow(mainWindow, image);
 
-	waitKey(0);
+	cv::waitKey(0);
 	
 	cv::destroyWindow(mainWindow);
 
