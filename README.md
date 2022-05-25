@@ -1,5 +1,5 @@
 # LIBSVM C++ 
-Este programa é parte de um pequeno projeto de introdução à biblioteca [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) com C++. O conteúdo também encontra-se disponível na plataforma [Youtube](www.youtube.com) e corresponde ao segundo vídeo do playlist(Introdução à Biblioteca LIBSVM). Com o tempo atualizarei os programas desenvolvidos.
+Este programa é parte de um pequeno projeto de introdução à biblioteca [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) com C++. O conteúdo também encontra-se disponível na plataforma [Youtube](https://youtu.be/m9KqN_osU4A) e corresponde ao segundo vídeo do playlist(Introdução à Biblioteca LIBSVM). Com o tempo atualizarei os programas desenvolvidos.
 
 ### PROGRAMAS DESENVOLVIDOS:
 
